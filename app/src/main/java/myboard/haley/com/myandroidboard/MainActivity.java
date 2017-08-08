@@ -3,6 +3,7 @@ package myboard.haley.com.myandroidboard;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -199,9 +200,19 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog dialog = builder.create();
                 dialog.show();
 
-
                 break;
+
+
+            // 목록 보기 버튼 클릭
             case R.id.boardlist:
+                if(MainActivity.this.id != null && !MainActivity.this.id.equals("")) {
+                    // 로그인 상태 O -> BoardListActivity로 이동
+                    startActivity(new Intent(MainActivity.this, BoardListActivity.class));
+
+                } else {
+                    // 로그인 상태 X
+                    Toast.makeText(MainActivity.this, "로그인이 필요한 서비스 입니다.", Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
 

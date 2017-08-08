@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	tools:context="myboard.haley.com.myandroidboard.BoardListActivity">
+	
+	<!--메인 페이지 이동 버튼-->
+	
+	<Button
+		android:id="@+id/main_bt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="8dp"
+		android:text="메인으로"/>
+	
+	
+	<!--목록 보기 리스트 뷰-->
+	<ListView
+		android:id="@+id/board_listview"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	
+	</ListView>
+
+
+</LinearLayout>
